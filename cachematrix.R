@@ -1,8 +1,7 @@
 
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
+## makeCacheMatrix create a new matrix concept with inversed cache attribute.
+## You can set matrix many times by calling set method.
+## getInversed method returns inversed matrix if and only if you set inversed before by calling setInversed
 
 makeCacheMatrix <- function(x = matrix()) {
   inversed <- NULL
@@ -20,7 +19,8 @@ makeCacheMatrix <- function(x = matrix()) {
   
 }
 
-## Write a short comment describing this function
+## Inversion algorithm is encapsulated in cacheSolve function.
+## If cacheSolve called before for unchanged matrix it will return inversed matrix from cache. In the other way it inverse cache and set in matrix cache.
 cacheSolve <- function(m,...){
   if (is.null( m$getInversed()))
     message("Cache missed")
